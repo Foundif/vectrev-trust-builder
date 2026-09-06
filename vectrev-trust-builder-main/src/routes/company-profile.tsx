@@ -8,16 +8,17 @@ const PROFILE_URL = "/resources/vectrev-company-profile-2025.pdf";
 export const Route = createFileRoute("/company-profile")({
   head: () => ({
     meta: [
-      { title: "Company Profile 2025 — Download PDF | VECTREV Engineering Solutions" },
+      { title: "Company Profile 2026 — Download PDF | VECTREV Engineering Solutions" },
       {
         name: "description",
         content:
-          "View or download the official VECTREV Engineering Solutions Pvt Ltd company profile 2025 — services, instruments, completed projects in India and Cameroon, and 2025-26 plans.",
+          "View or download the official VECTREV Engineering Solutions Pvt Ltd company profile 2026 — services, instruments, completed projects in India and Cameroon, and current plans.",
       },
-      { property: "og:title", content: "VECTREV Company Profile 2025" },
+      { property: "og:title", content: "VECTREV Company Profile 2026" },
       {
         property: "og:description",
-        content: "Official corporate profile — engineering, testing, commissioning and power system studies.",
+        content:
+          "Official corporate profile — engineering, testing, commissioning and power system studies.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -48,14 +49,14 @@ function CompanyProfile() {
             <span className="text-accent-brand">with intelligent solutions.</span>
           </>
         }
-        subtitle="The complete VECTREV Engineering Solutions Pvt Ltd profile — capability, instruments, completed projects and 2025-26 plans. Read it here or download the PDF."
+        subtitle="The complete VECTREV Engineering Solutions Pvt Ltd profile — capability, instruments, completed projects and 2026 plans. Read it here or download the PDF."
       />
 
       <section className="px-5 sm:px-8 pb-6">
         <div className="max-w-7xl mx-auto flex flex-wrap gap-3">
           <a
             href={PROFILE_URL}
-            download="VECTREV-Company-Profile-2025.pdf"
+            download="VECTREV-Company-Profile-2026.pdf"
             className="inline-flex items-center gap-2 bg-gradient-accent text-accent-foreground font-semibold px-6 py-3.5 rounded-full shadow-accent glow-accent"
           >
             <Download className="h-4 w-4" /> Download profile (PDF)
@@ -81,11 +82,13 @@ function CompanyProfile() {
       <section className="px-5 sm:px-8 py-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-6">
           <div className="lg:col-span-8 rounded-[2rem] overflow-hidden border border-border bg-card shadow-card-premium">
-            <object data={PROFILE_URL} type="application/pdf" className="w-full h-[70vh] min-h-[520px]">
+            <object
+              data={PROFILE_URL}
+              type="application/pdf"
+              className="w-full h-[70vh] min-h-[520px]"
+            >
               <div className="p-10 text-center">
-                <p className="text-muted-foreground">
-                  Your browser can't display the PDF inline.
-                </p>
+                <p className="text-muted-foreground">Your browser can't display the PDF inline.</p>
                 <a
                   href={PROFILE_URL}
                   target="_blank"
@@ -100,7 +103,9 @@ function CompanyProfile() {
 
           <aside className="lg:col-span-4 space-y-6">
             <div className="rounded-[2rem] bg-dark text-dark-foreground p-8">
-              <div className="text-xs uppercase tracking-[0.22em] text-white/50">Inside the profile</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-white/50">
+                Inside the profile
+              </div>
               <ul className="mt-5 space-y-3">
                 {highlights.map((h) => (
                   <li key={h} className="flex items-start gap-2 text-sm text-white/85">
@@ -111,7 +116,9 @@ function CompanyProfile() {
               </ul>
             </div>
             <div className="rounded-[2rem] bg-card border border-border p-8 shadow-card-premium">
-              <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">Company details</div>
+              <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">
+                Company details
+              </div>
               <dl className="mt-5 space-y-3 text-sm">
                 <div>
                   <dt className="text-muted-foreground">Entity</dt>
