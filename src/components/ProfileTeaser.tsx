@@ -1,16 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Download, FileText, ArrowUpRight } from "lucide-react";
 
-const PROFILE_URL = "/resources/vectrev-company-profile-2025.pdf";
+const PROFILE_URL = "/resources/vectrev-company-profile-2026.pdf";
 
 export function ProfileTeaser() {
   return (
     <section className="px-5 sm:px-8 py-10">
       <div className="max-w-7xl mx-auto rounded-[2rem] bg-dark text-dark-foreground p-8 md:p-12 grid lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-8">
-          <div className="text-xs uppercase tracking-[0.22em] text-white/50">
-            Company profile 2026
-          </div>
+          <div className="text-xs uppercase tracking-[0.22em] text-white/50">Company profile 2026</div>
           <h2 className="mt-4 text-2xl md:text-3xl font-extrabold heading-crisp leading-tight">
             Everything about VECTREV in one document.
           </h2>

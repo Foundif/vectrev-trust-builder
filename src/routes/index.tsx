@@ -39,15 +39,8 @@ export const Route = createFileRoute("/")({
         content:
           "Industrial electrical Testing & Commissioning, engineering consultancy and safety-compliant project execution. Trusted by plants and contractors across Tamil Nadu.",
       },
-      {
-        property: "og:title",
-        content: "VECTREV Engineering Solutions — Industrial T&C & Consulting | Tamil Nadu",
-      },
-      {
-        property: "og:description",
-        content:
-          "Industrial electrical Testing & Commissioning, engineering consultancy and safety-compliant project execution. Trusted by plants and contractors across Tamil Nadu.",
-      },
+      { property: "og:title", content: "VECTREV Engineering Solutions — Industrial T&C & Consulting | Tamil Nadu" },
+      { property: "og:description", content: "Industrial electrical Testing & Commissioning, engineering consultancy and safety-compliant project execution. Trusted by plants and contractors across Tamil Nadu." },
     ],
     scripts: [
       {
@@ -90,22 +83,15 @@ const partnerLogos = [
   { name: "Areva", src: "/clients/areva.png", note: "EPC / Integration Partner" },
   { name: "Petron Engineering", src: "/clients/petron.png", note: "EPC / Integration Partner" },
   { name: "ABB", src: "/clients/abb.png", note: "OEM equipment & relays" },
-  {
-    name: "Schneider Electric",
-    src: "/clients/schneider.png",
-    note: "OEM switchgear & automation",
-  },
+  { name: "Schneider Electric", src: "/clients/schneider.png", note: "OEM switchgear & automation" },
   { name: "OMICRON", src: "/clients/omicron.png", note: "Relay test equipment" },
   { name: "Megger", src: "/clients/megger.png", note: "Test & measurement" },
   { name: "GE Grid Solutions", src: "/clients/ge-grid.png", note: "Protection & grid systems" },
   { name: "Easun Reyrolle", src: "/clients/easun-reyrolle.png", note: "Protection relays" },
-  {
-    name: "Adani Renewables",
-    src: "/clients/adani-renewables.png",
-    note: "Renewable energy client",
-  },
+  { name: "Adani Renewables", src: "/clients/adani-renewables.png", note: "Renewable energy client" },
   { name: "NLC India Ltd", src: "/clients/nlc-india.png", note: "Utility client" },
 ];
+
 
 const consultantPartners = [
   "ABB",
@@ -123,37 +109,12 @@ const consultantPartners = [
 ];
 
 const heroSlideMeta = [
-  {
-    key: "home.hero.image1",
-    label: "Switchgear Testing",
-    badge: "LV / MV / HV",
-    tag: "Field Testing",
-  },
-  {
-    key: "home.hero.image2",
-    label: "Substation Commissioning",
-    badge: "Up to 225 kV",
-    tag: "Switchyard",
-  },
-  {
-    key: "home.hero.image3",
-    label: "Protection & C&R Panels",
-    badge: "ABB · Siemens",
-    tag: "Numerical",
-  },
-  {
-    key: "home.hero.image4",
-    label: "Primary Injection Testing",
-    badge: "KUSAM-MECO",
-    tag: "Diagnostics",
-  },
+  { key: "home.hero.image1", label: "Switchgear Testing", badge: "LV / MV / HV", tag: "Field Testing" },
+  { key: "home.hero.image2", label: "Substation Commissioning", badge: "Up to 225 kV", tag: "Switchyard" },
+  { key: "home.hero.image3", label: "Protection & C&R Panels", badge: "ABB · Siemens", tag: "Numerical" },
+  { key: "home.hero.image4", label: "Primary Injection Testing", badge: "KUSAM-MECO", tag: "Diagnostics" },
   { key: "home.hero.image5", label: "Secondary Injection", badge: "Scheme Proving", tag: "Relays" },
-  {
-    key: "home.hero.image6",
-    label: "Renewable Substations",
-    badge: "Wind · Solar",
-    tag: "Energisation",
-  },
+  { key: "home.hero.image6", label: "Renewable Substations", badge: "Wind · Solar", tag: "Energisation" },
 ];
 
 function Hero() {
@@ -194,17 +155,11 @@ function Hero() {
             <span className="block">{t("home.hero.title_line3")}</span>
           </motion.h1>
 
-          <motion.p
-            variants={fadeUp}
-            className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed"
-          >
+          <motion.p variants={fadeUp} className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
             {t("home.hero.subtitle")}
           </motion.p>
 
-          <motion.div
-            variants={fadeUp}
-            className="mt-8 grid grid-cols-2 sm:flex sm:flex-wrap sm:items-center gap-3"
-          >
+          <motion.div variants={fadeUp} className="mt-8 grid grid-cols-2 sm:flex sm:flex-wrap sm:items-center gap-3">
             <Link
               to="/contact"
               className="glow-ink inline-flex items-center justify-center gap-2 bg-foreground text-background font-semibold px-5 sm:px-7 py-3.5 sm:py-4 rounded-full hover:bg-accent transition group text-sm sm:text-base"
@@ -219,6 +174,7 @@ function Hero() {
               {t("home.hero.cta_secondary")}
             </Link>
           </motion.div>
+
 
           <motion.div variants={fadeUp} className="mt-10 grid grid-cols-2 max-w-lg gap-6">
             {[
@@ -324,8 +280,8 @@ function ClientsMarquee() {
           Trusted by EPCs, OEMs & utilities
         </h2>
         <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto text-sm">
-          VECTREV works alongside global project builders, OEMs and consultants — delivering
-          pre-commissioning, protection studies and HV field testing.
+          VECTREV works alongside global project builders, OEMs and consultants —
+          delivering pre-commissioning, protection studies and HV field testing.
         </p>
 
         <div className="mt-12 overflow-hidden relative [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
@@ -347,6 +303,7 @@ function ClientsMarquee() {
           </div>
         </div>
 
+
         {/* Consultants & utilities — text marquee */}
         <div className="mt-14 pt-10 border-t border-border">
           <div className="text-center text-[11px] uppercase tracking-[0.22em] text-muted-foreground mb-6">
@@ -355,14 +312,35 @@ function ClientsMarquee() {
           <div className="overflow-hidden relative">
             <div className="flex gap-10 whitespace-nowrap marquee w-max">
               {[...consultantPartners, ...consultantPartners].map((c, i) => (
-                <span
-                  key={i}
-                  className="text-base md:text-lg font-semibold text-foreground/40 hover:text-accent-brand transition"
-                >
+                <span key={i} className="text-base md:text-lg font-semibold text-foreground/40 hover:text-accent-brand transition">
                   {c}
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  );
+}
+
+function PromiseBand() {
+  const { t } = useSiteContent();
+  return (
+    <section className="px-5 sm:px-8 py-16">
+      <div className="max-w-7xl mx-auto rounded-[2rem] bg-dark text-dark-foreground px-8 py-10 md:px-12 md:py-14">
+        <div className="grid lg:grid-cols-12 gap-8 items-center">
+          <h2 className="lg:col-span-7 text-2xl md:text-4xl font-extrabold leading-tight">
+            {t("home.promise.title")}
+          </h2>
+          <div className="lg:col-span-5 grid sm:grid-cols-3 gap-4 text-sm font-semibold text-white/75">
+            {["home.promise.line1", "home.promise.line2", "home.promise.line3"].map((key) => (
+              <div key={key} className="border-l-2 border-accent pl-3">
+                {t(key)}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -388,41 +366,18 @@ function Solution() {
           transition={{ duration: 0.7 }}
           className="relative rounded-[2rem] overflow-hidden shadow-soft"
         >
-          <img
-            src={img("home.solution.image")}
-            alt="VECTREV engineering team on site"
-            className="w-full h-[500px] object-cover"
-          />
+          <img src={img("home.solution.image")} alt="VECTREV engineering team on site" className="w-full h-[500px] object-cover" />
         </motion.div>
         <div>
-          <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">
-            {t("home.solution.eyebrow")}
-          </div>
+          <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">{t("home.solution.eyebrow")}</div>
           <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-foreground leading-tight">
             {t("home.solution.title")}
           </h2>
-          <p className="mt-5 text-muted-foreground leading-relaxed">{t("home.solution.body")}</p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            {[
-              "home.solution.principle1",
-              "home.solution.principle2",
-              "home.solution.principle3",
-            ].map((key) => (
-              <div
-                key={key}
-                className="border-l-2 border-accent bg-secondary/50 px-3 py-2 text-sm font-semibold text-foreground"
-              >
-                {t(key)}
-              </div>
-            ))}
-          </div>
+          <p className="mt-5 text-muted-foreground leading-relaxed">
+            {t("home.solution.body")}
+          </p>
           <ul className="mt-8 space-y-3">
-            {[
-              "home.solution.bullet1",
-              "home.solution.bullet2",
-              "home.solution.bullet3",
-              "home.solution.bullet4",
-            ].map((key) => (
+            {["home.solution.bullet1", "home.solution.bullet2", "home.solution.bullet3", "home.solution.bullet4"].map((key) => (
               <li key={key} className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-accent-brand flex-shrink-0 mt-0.5" />
                 <span className="text-foreground font-medium">{t(key)}</span>
@@ -436,30 +391,10 @@ function Solution() {
 }
 
 const services = [
-  {
-    icon: Zap,
-    title: "Electrical T&C",
-    desc: "Pre-commissioning, relay & HV testing.",
-    image: testKit,
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Consultancy",
-    desc: "Protection studies, SLDs, BOQs.",
-    image: relay,
-  },
-  {
-    icon: HardHat,
-    title: "Project Execution",
-    desc: "On-site supervision & OEM coordination.",
-    image: cables,
-  },
-  {
-    icon: ShieldCheck,
-    title: "Safety Compliance",
-    desc: "CEA / Electrical Inspectorate ready.",
-    image: hvTest,
-  },
+  { icon: Zap, title: "Electrical T&C", desc: "Pre-commissioning, relay & HV testing.", image: testKit },
+  { icon: ClipboardCheck, title: "Consultancy", desc: "Protection studies, SLDs, BOQs.", image: relay },
+  { icon: HardHat, title: "Project Execution", desc: "On-site supervision & OEM coordination.", image: cables },
+  { icon: ShieldCheck, title: "Safety Compliance", desc: "CEA / Electrical Inspectorate ready.", image: hvTest },
 ];
 
 function FeaturedServices() {
@@ -468,14 +403,13 @@ function FeaturedServices() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">
-              Our expertise
-            </div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">Our expertise</div>
             <h2 className="mt-3 text-3xl md:text-5xl font-extrabold text-foreground">
               Featured Services
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl">
-              Four engineering disciplines built around one promise: reliable power, every shift.
+              Four engineering disciplines built around one promise: reliable
+              power, every shift.
             </p>
           </div>
           <Link
@@ -503,11 +437,7 @@ function FeaturedServices() {
                 className="group flex h-full flex-col rounded-3xl overflow-hidden bg-card border border-border shadow-card-premium hover:-translate-y-1 transition"
               >
                 <div className="relative h-56 overflow-hidden flex-shrink-0">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
-                  />
+                  <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
                   <div className="absolute top-4 left-4 h-10 w-10 rounded-full bg-white/95 flex items-center justify-center">
                     <s.icon className="h-5 w-5 text-accent-brand" />
@@ -555,10 +485,7 @@ const testimonials = [
 function SocialProof() {
   const [i, setI] = useState(0);
   const next = useCallback(() => setI((v) => (v + 1) % testimonials.length), []);
-  const prev = useCallback(
-    () => setI((v) => (v - 1 + testimonials.length) % testimonials.length),
-    [],
-  );
+  const prev = useCallback(() => setI((v) => (v - 1 + testimonials.length) % testimonials.length), []);
   useEffect(() => {
     const t = setInterval(next, 5500);
     return () => clearInterval(t);
@@ -569,9 +496,7 @@ function SocialProof() {
       <div className="max-w-7xl mx-auto rounded-[2.5rem] bg-secondary/60 p-8 md:p-16">
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-4">
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">
-              Social proof
-            </div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">Social proof</div>
             <div className="mt-5 flex items-end gap-3">
               <div className="text-6xl font-extrabold text-foreground leading-none">5.0</div>
               <div className="pb-1">
@@ -584,8 +509,8 @@ function SocialProof() {
               </div>
             </div>
             <p className="mt-6 text-muted-foreground max-w-sm leading-relaxed">
-              Plant owners and project managers choose VECTREV because we show up, document, and
-              deliver.
+              Plant owners and project managers choose VECTREV because we show
+              up, document, and deliver.
             </p>
             <div className="mt-8 flex items-center gap-2">
               <button
@@ -678,46 +603,18 @@ function ComplianceBadges() {
 }
 
 const credentials = [
-  {
-    title: "Certificate of Incorporation",
-    issuer: "Ministry of Corporate Affairs · GoI",
-    ref: "CIN · U71200TN2025PTC180169",
-    accent: "from-[oklch(0.35_0.08_258)] to-[oklch(0.18_0.04_258)]",
-  },
-  {
-    title: "GST Registration",
-    issuer: "Government of India · CBIC",
-    ref: "GSTIN · 33AALCV0745P1ZU",
-    accent: "from-[oklch(0.55_0.24_18)] to-[oklch(0.35_0.18_18)]",
-  },
-  {
-    title: "Udyam / MSME Recognition",
-    issuer: "Ministry of MSME",
-    ref: "Recognised Micro Enterprise",
-    accent: "from-[oklch(0.4_0.12_180)] to-[oklch(0.22_0.06_258)]",
-  },
-  {
-    title: "Performance Letter — Substation T&C",
-    issuer: "EPC Client · Tamil Nadu",
-    ref: "33/11 kV Energisation · 2025",
-    accent: "from-[oklch(0.35_0.08_258)] to-[oklch(0.18_0.04_258)]",
-  },
-  {
-    title: "Safety Compliance Sign-off",
-    issuer: "Plant EHS · Process Industry",
-    ref: "Zero-incident shutdown · 2025",
-    accent: "from-[oklch(0.55_0.24_18)] to-[oklch(0.28_0.14_18)]",
-  },
+  { title: "Certificate of Incorporation", issuer: "Ministry of Corporate Affairs · GoI", ref: "CIN · U71200TN2025PTC180169", accent: "from-[oklch(0.35_0.08_258)] to-[oklch(0.18_0.04_258)]" },
+  { title: "GST Registration", issuer: "Government of India · CBIC", ref: "GSTIN · 33AALCV0745P1ZU", accent: "from-[oklch(0.55_0.24_18)] to-[oklch(0.35_0.18_18)]" },
+  { title: "Udyam / MSME Recognition", issuer: "Ministry of MSME", ref: "Recognised Micro Enterprise", accent: "from-[oklch(0.4_0.12_180)] to-[oklch(0.22_0.06_258)]" },
+  { title: "Performance Letter — Substation T&C", issuer: "EPC Client · Tamil Nadu", ref: "33/11 kV Energisation · 2025", accent: "from-[oklch(0.35_0.08_258)] to-[oklch(0.18_0.04_258)]" },
+  { title: "Safety Compliance Sign-off", issuer: "Plant EHS · Process Industry", ref: "Zero-incident shutdown · 2025", accent: "from-[oklch(0.55_0.24_18)] to-[oklch(0.28_0.14_18)]" },
 ];
 
 function Credentials() {
   const [i, setI] = useState(0);
   const [open, setOpen] = useState<number | null>(null);
   const next = useCallback(() => setI((v) => (v + 1) % credentials.length), []);
-  const prev = useCallback(
-    () => setI((v) => (v - 1 + credentials.length) % credentials.length),
-    [],
-  );
+  const prev = useCallback(() => setI((v) => (v - 1 + credentials.length) % credentials.length), []);
 
   useEffect(() => {
     if (open !== null) return;
@@ -727,15 +624,10 @@ function Credentials() {
 
   useEffect(() => {
     if (open === null) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(null);
-    };
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
+    return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
   }, [open]);
 
   return (
@@ -743,30 +635,20 @@ function Credentials() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">
-              Credentials & Certificates
-            </div>
+            <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">Credentials & Certificates</div>
             <h2 className="mt-3 text-3xl md:text-5xl font-extrabold text-foreground heading-crisp">
               Recognised. Registered. Referenced.
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl">
-              Statutory registrations and real client performance letters — click any card to open
-              it full-screen.
+              Statutory registrations and real client performance letters —
+              click any card to open it full-screen.
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <button
-              onClick={prev}
-              aria-label="Previous credential"
-              className="h-11 w-11 rounded-full border border-border bg-card hover:bg-secondary transition flex items-center justify-center"
-            >
+            <button onClick={prev} aria-label="Previous credential" className="h-11 w-11 rounded-full border border-border bg-card hover:bg-secondary transition flex items-center justify-center">
               <ChevronLeft className="h-5 w-5" />
             </button>
-            <button
-              onClick={next}
-              aria-label="Next credential"
-              className="h-11 w-11 rounded-full border border-border bg-card hover:bg-secondary transition flex items-center justify-center"
-            >
+            <button onClick={next} aria-label="Next credential" className="h-11 w-11 rounded-full border border-border bg-card hover:bg-secondary transition flex items-center justify-center">
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
@@ -790,9 +672,7 @@ function Credentials() {
                 </div>
                 <div className="relative h-full p-7 flex flex-col justify-between text-white">
                   <div>
-                    <div className="text-[10px] uppercase tracking-[0.22em] text-white/60">
-                      Certificate
-                    </div>
+                    <div className="text-[10px] uppercase tracking-[0.22em] text-white/60">Certificate</div>
                     <div className="mt-3 text-xl font-extrabold leading-tight">{c.title}</div>
                     <div className="mt-2 text-sm text-white/75">{c.issuer}</div>
                   </div>
@@ -824,19 +704,13 @@ function Credentials() {
         {open !== null && (
           <motion.div
             className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={() => setOpen(null)}
-            role="dialog"
-            aria-modal="true"
+            role="dialog" aria-modal="true"
           >
             <button
               type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                setOpen(null);
-              }}
+              onClick={(e) => { e.stopPropagation(); setOpen(null); }}
               aria-label="Close"
               className="fixed top-4 right-4 sm:top-6 sm:right-6 z-10 h-11 w-11 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition"
             >
@@ -852,18 +726,12 @@ function Credentials() {
               <div className="absolute inset-0 grid-pattern opacity-25" />
               <div className="relative h-full p-10 md:p-14 flex flex-col justify-between text-white">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.22em] text-white/60">
-                    Certificate
-                  </div>
-                  <div className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight">
-                    {credentials[open].title}
-                  </div>
+                  <div className="text-xs uppercase tracking-[0.22em] text-white/60">Certificate</div>
+                  <div className="mt-4 text-3xl md:text-4xl font-extrabold leading-tight">{credentials[open].title}</div>
                   <div className="mt-3 text-white/75">{credentials[open].issuer}</div>
                 </div>
                 <div>
-                  <div className="text-sm font-mono text-white/85 tabular-nums">
-                    {credentials[open].ref}
-                  </div>
+                  <div className="text-sm font-mono text-white/85 tabular-nums">{credentials[open].ref}</div>
                   <a
                     href="/contact"
                     className="mt-5 inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 border border-white/25 backdrop-blur px-5 py-2.5 rounded-full text-sm font-semibold transition"
@@ -888,13 +756,9 @@ function Home() {
       <ClientsMarquee />
       <OemBrands />
       <ProfileTeaser />
+      <PromiseBand />
       <div className="relative">
-        <img
-          src={substation}
-          alt=""
-          aria-hidden="true"
-          className="absolute -z-10 inset-0 w-full h-full object-cover opacity-[0.04]"
-        />
+        <img src={substation} alt="" aria-hidden="true" className="absolute -z-10 inset-0 w-full h-full object-cover opacity-[0.04]" />
         <Solution />
       </div>
       <FeaturedServices />
