@@ -104,6 +104,11 @@ function ServiceDetail() {
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-3xl bg-dark text-dark-foreground p-8">
               <div className="text-xs uppercase tracking-[0.22em] text-white/50">What you get</div>
+              {service.slug === "hv-lv-testing-commissioning" && (
+                <strong className="mt-3 block text-base font-extrabold text-white leading-snug">
+                  Confident Energization. Verified Performance. Complete Assurance.
+                </strong>
+              )}
               <ul className="mt-5 space-y-3">
                 {service.outcomes.map((o) => (
                   <li key={o} className="flex items-start gap-2 text-sm text-white/85">
@@ -112,17 +117,6 @@ function ServiceDetail() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="rounded-3xl bg-card border border-border p-8 shadow-card-premium">
-              <div className="text-xs uppercase tracking-[0.22em] text-accent-brand">FAQ</div>
-              <div className="mt-5 space-y-5">
-                {service.faqs.map((f) => (
-                  <div key={f.q}>
-                    <div className="font-semibold text-foreground text-sm">{f.q}</div>
-                    <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
