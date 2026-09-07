@@ -9,21 +9,21 @@ export type Branch = {
 
 export const branches: Branch[] = [
   {
-    name: "Thoothukudi — Operating Office",
-    type: "Head operations & testing base",
-    address: "61E/2D, TMC Colony, Polepettai, Thoothukudi – 628 002, Tamil Nadu, India",
-    phones: ["+91 63796 08428", "+91 96004 49144"],
-    email: "info@vectrev.in",
-    mapQuery: "61E/2D, Polepettai, Thoothukudi 628002, Tamil Nadu",
-  },
-  {
     name: "Thoothukudi — Registered Office",
     type: "Corporate & statutory",
     address:
       "111L/2, State Bank Colony, Polenaickenpettai, Thoothukudi – 628 002, Tamil Nadu, India",
     phones: ["+91 96004 49144"],
     email: "revengineers.tuty@gmail.com",
-    mapQuery: "State Bank Colony, Polenaickenpettai, Thoothukudi 628002",
+    mapQuery: "VECTREV Engineering Solutions, State Bank Colony, Polenaickenpettai, Thoothukudi 628002",
+  },
+  {
+    name: "Thoothukudi — Operating Office",
+    type: "Head operations & testing base",
+    address: "61E/2D, TMC Colony, Polepettai, Thoothukudi – 628 002, Tamil Nadu, India",
+    phones: ["+91 63796 08428", "+91 96004 49144"],
+    email: "info@vectrev.in",
+    mapQuery: "VECTREV Engineering Solutions, 61E/2D, Polepettai, Thoothukudi 628002, Tamil Nadu",
   },
   {
     name: "Chennai — Project Coordination",

@@ -148,10 +148,14 @@ function Contact() {
                   </div>
                 </div>
               </div>
-              <div className="mt-5 rounded-xl overflow-hidden border border-border">
+               <div className="mt-5 rounded-xl overflow-hidden border border-border bg-secondary">
+                 <div className="px-4 py-3 border-b border-border">
+                   <div className="text-sm font-bold text-foreground">VECTREV Engineering Solutions</div>
+                   <div className="mt-0.5 text-xs text-muted-foreground">Operating office · Polepettai, Thoothukudi</div>
+                 </div>
                 <iframe
                   title="VECTREV Engineering Solutions — Thoothukudi office location"
-                  src="https://www.google.com/maps?q=VECTREV+Engineering+Solutions+TMC+Colony+Polepettai+Thoothukudi+628002&output=embed"
+                   src="https://www.google.com/maps?q=VECTREV%20Engineering%20Solutions%2C%2061E%2F2D%20TMC%20Colony%2C%20Polepettai%2C%20Thoothukudi%20628002&output=embed"
                   width="100%"
                   height="220"
                   style={{ border: 0 }}
@@ -161,7 +165,7 @@ function Contact() {
                 />
               </div>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=VECTREV+Engineering+Solutions+TMC+Colony+Polepettai+Thoothukudi+628002"
+                 href="https://www.google.com/maps/search/?api=1&query=VECTREV%20Engineering%20Solutions%2C%2061E%2F2D%20TMC%20Colony%2C%20Polepettai%2C%20Thoothukudi%20628002"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-brand hover:underline"

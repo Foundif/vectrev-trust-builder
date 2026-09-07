@@ -15,27 +15,36 @@ export function SiteContentProvider({ children }: { children: React.ReactNode })
     let cancelled = false;
 
     const load = async () => {
-      const { data } = await supabase.from("site_content").select("key,value,image_url");
-      if (cancelled || !data) return;
-      const next: Overrides = {};
-      for (const r of data as Row[]) next[r.key] = { value: r.value, image_url: r.image_url };
-      setOverrides(next);
+      try {
+        const { data } = await supabase.from("site_content").select("key,value,image_url");
+        if (cancelled || !data) return;
+        const next: Overrides = {};
+        for (const r of data as Row[]) next[r.key] = { value: r.value, image_url: r.image_url };
+        setOverrides(next);
+      } catch {
+        // The public site remains usable when cloud content is unavailable.
+      }
     };
 
-    load();
+    void load();
 
-    const channel = supabase
-      .channel("site-content-live")
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "site_content" },
-        () => void load(),
-      )
-      .subscribe();
+    let channel: ReturnType<typeof supabase.channel> | undefined;
+    try {
+      channel = supabase
+        .channel("site-content-live")
+        .on(
+          "postgres_changes",
+          { event: "*", schema: "public", table: "site_content" },
+          () => void load(),
+        )
+        .subscribe();
+    } catch {
+      // Realtime is optional for public visitors.
+    }
 
     return () => {
       cancelled = true;
-      void supabase.removeChannel(channel);
+      if (channel) void supabase.removeChannel(channel);
     };
   }, []);
 

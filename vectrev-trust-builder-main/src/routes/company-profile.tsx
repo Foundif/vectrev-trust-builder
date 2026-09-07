@@ -45,8 +45,9 @@ function CompanyProfile() {
         eyebrow="Corporate profile"
         title={
           <>
-            Energizing infrastructure <br />
-            <span className="text-accent-brand">with intelligent solutions.</span>
+            <span className="block">Energizing</span>
+            <span className="block text-accent-brand">infrastructure</span>
+            <span className="block">with intelligent solutions.</span>
           </>
         }
         subtitle="The complete VECTREV Engineering Solutions Pvt Ltd profile — capability, instruments, completed projects and 2026 plans. Read it here or download the PDF."

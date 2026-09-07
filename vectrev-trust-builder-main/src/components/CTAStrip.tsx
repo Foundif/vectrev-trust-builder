@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 export function CTAStrip({
   eyebrow = "Let's talk",
   title = "Avoid costly delays and safety risks.",
-  subtitle = "Send us your scope. An engineer responds promptly with a clear plan, realistic timeline, and a no-nonsense quote.",
+  subtitle = "Send us your scope. An engineer responds promptly with a clear plan, realistic timeline, and a straightforward quote.",
 }: {
   eyebrow?: string;
   title?: string;

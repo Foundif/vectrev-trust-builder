@@ -184,7 +184,7 @@ function Hero() {
 
           <motion.h1
             variants={fadeUp}
-            className="mt-6 text-[2.4rem] sm:text-5xl lg:text-[4.5rem] font-extrabold tracking-tight text-foreground leading-[1.15] sm:leading-[1.12] lg:leading-[1.08]"
+            className="mt-6 text-[2.15rem] sm:text-5xl lg:text-[4.5rem] font-extrabold tracking-tight text-foreground leading-[1.1] sm:leading-[1.12] lg:leading-[1.08]"
           >
             <span className="block">{t("home.hero.title_line1")}</span>
             <span className="block">
@@ -583,9 +583,9 @@ function SocialProof() {
                 <div className="text-xs text-muted-foreground mt-1">Google reviews</div>
               </div>
             </div>
-            <p className="mt-6 text-muted-foreground max-w-sm leading-relaxed">
-              Plant owners and project managers choose VECTREV because we show up, document, and
-              deliver.
+             <p className="mt-6 text-muted-foreground max-w-sm leading-relaxed">
+               Plant owners and project managers choose VECTREV because we show up, document, and
+               deliver.
             </p>
             <div className="mt-8 flex items-center gap-2">
               <button
