@@ -97,7 +97,7 @@ function Branches() {
         <div className="max-w-7xl mx-auto rounded-[2rem] overflow-hidden border border-border shadow-card-premium">
           <iframe
             title="VECTREV Thoothukudi office location"
-            src="https://www.google.com/maps?q=Polepettai%2C%20Thoothukudi%20628002%2C%20Tamil%20Nadu&output=embed"
+           src="https://www.google.com/maps?q=VECTREV%20Engineering%20Solutions%2C%2061E%2F2D%20TMC%20Colony%2C%20Polepettai%2C%20Thoothukudi%20628002&output=embed"
             className="w-full h-[420px]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
