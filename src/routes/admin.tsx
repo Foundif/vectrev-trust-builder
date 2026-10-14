@@ -115,7 +115,7 @@ function AdminLayout() {
   );
 }
 
-/ Update the nav array:
+// Update the nav array:
 const nav = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/admin/leads", label: "Leads & CRM", icon: Users, exact: false },

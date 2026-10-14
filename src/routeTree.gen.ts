@@ -19,6 +19,7 @@ import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminContentRouteImport } from './routes/admin.content'
 import { Route as AdminLeadsRouteImport } from './routes/admin.leads'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
@@ -74,6 +75,11 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AdminRoute,
 } as any)
+const AdminContentRoute = AdminContentRouteImport.update({
+  id: '/content',
+  path: '/content',
+  getParentRoute: () => AdminRoute,
+} as any)
 const AdminLeadsRoute = AdminLeadsRouteImport.update({
   id: '/leads',
   path: '/leads',
@@ -105,6 +111,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/login': typeof LoginRoute
   '/products': typeof ProductsRoute
+  '/admin/content': typeof AdminContentRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/api/chat': typeof ApiChatRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -120,6 +127,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/login': typeof LoginRoute
   '/products': typeof ProductsRoute
+  '/admin/content': typeof AdminContentRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/api/chat': typeof ApiChatRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -137,6 +145,7 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/login': typeof LoginRoute
   '/products': typeof ProductsRoute
+  '/admin/content': typeof AdminContentRoute
   '/admin/leads': typeof AdminLeadsRoute
   '/api/chat': typeof ApiChatRoute
   '/services/$slug': typeof ServicesSlugRoute
@@ -155,6 +164,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/login'
     | '/products'
+    | '/admin/content'
     | '/admin/leads'
     | '/api/chat'
     | '/services/$slug'
@@ -170,6 +180,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/login'
     | '/products'
+    | '/admin/content'
     | '/admin/leads'
     | '/api/chat'
     | '/services/$slug'
@@ -186,6 +197,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/login'
     | '/products'
+    | '/admin/content'
     | '/admin/leads'
     | '/api/chat'
     | '/services/$slug'
@@ -280,6 +292,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof AdminRoute
     }
+    '/admin/content': {
+      id: '/admin/content'
+      path: '/content'
+      fullPath: '/admin/content'
+      preLoaderRoute: typeof AdminContentRouteImport
+      parentRoute: typeof AdminRoute
+    }
     '/admin/leads': {
       id: '/admin/leads'
       path: '/leads'
@@ -312,11 +331,13 @@ declare module '@tanstack/react-router' {
 }
 
 interface AdminRouteChildren {
+  AdminContentRoute: typeof AdminContentRoute
   AdminLeadsRoute: typeof AdminLeadsRoute
   AdminIndexRoute: typeof AdminIndexRoute
 }
 
 const AdminRouteChildren: AdminRouteChildren = {
+  AdminContentRoute: AdminContentRoute,
   AdminLeadsRoute: AdminLeadsRoute,
   AdminIndexRoute: AdminIndexRoute,
 }

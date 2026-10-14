@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { DEFAULT_CONTENT } from "@/data/siteContent";
+import { contentDefaults } from "@/data/siteContent";
 
 export const Route = createFileRoute("/admin/content")({
   head: () => ({
@@ -43,8 +43,8 @@ export default function AdminContentPage() {
       if (error) throw error;
 
       const merged: Record<string, string> = {};
-      Object.entries(DEFAULT_CONTENT).forEach(([k, item]) => {
-        merged[k] = item.default;
+      Object.entries(contentDefaults).forEach(([key, item]) => {
+        merged[key] = item.value ?? item.image ?? "";
       });
 
       data?.forEach((row) => {
