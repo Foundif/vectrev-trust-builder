@@ -5,6 +5,7 @@ import {
   Users,
   LogOut,
   Loader2,
+  FileEdit, // <-- Add this icon
   ShieldCheck,
   ExternalLink,
 } from "lucide-react";
@@ -114,9 +115,11 @@ function AdminLayout() {
   );
 }
 
+/ Update the nav array:
 const nav = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/admin/leads", label: "Leads & CRM", icon: Users, exact: false },
+  { to: "/admin/content", label: "Site Content CMS", icon: FileEdit, exact: false },
 ] as const;
 
 function AdminSidebar({ email, role }: { email: string; role: "admin" | "staff" }) {
